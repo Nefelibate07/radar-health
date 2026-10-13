@@ -1,0 +1,40 @@
+// 公开版自定义演示拓扑，不对应客户设备。
+export const ROOT_ID = "hub"
+export const EDGES = [
+  [
+    "hub",
+    "antenna-monitor-unit"
+  ],
+  [
+    "hub",
+    "environment-control-device"
+  ],
+  [
+    "antenna-monitor-unit",
+    "drive-adu"
+  ],
+  [
+    "drive-adu",
+    "azimuth-motor-1"
+  ],
+  [
+    "drive-adu",
+    "azimuth-motor-2"
+  ],
+  [
+    "drive-adu",
+    "elevation-motor-1"
+  ],
+  [
+    "drive-adu",
+    "elevation-motor-2"
+  ],
+  [
+    "drive-adu",
+    "tilt-motor-1"
+  ],
+  [
+    "drive-adu",
+    "tilt-motor-2"
+  ]
+]

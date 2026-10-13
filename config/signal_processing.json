@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "categories": [
+    {"id": "discrete", "name": "离散量", "default_method": "none", "methods": ["none", "majority"]},
+    {"id": "voltage", "name": "电压", "default_method": "none", "methods": ["none", "moving_average", "median", "exponential"]},
+    {"id": "current", "name": "电流", "default_method": "moving_average", "methods": ["none", "moving_average", "median", "exponential"]},
+    {"id": "angle", "name": "角度", "default_method": "circular_average", "methods": ["none", "circular_average", "median", "exponential"]},
+    {"id": "integer", "name": "整数", "default_method": "none", "methods": ["none", "moving_average", "median", "exponential", "round"]},
+    {"id": "float", "name": "浮点数", "default_method": "none", "methods": ["none", "moving_average", "median", "exponential"]},
+    {"id": "other", "name": "其他数值", "default_method": "none", "methods": ["none", "moving_average", "median", "exponential"]}
+  ],
+  "algorithms": [
+    {"id": "none", "name": "不处理", "description": "保留当前原始值"},
+    {"id": "moving_average", "name": "均值滤波", "description": "计算最近窗口内数值的算术平均值"},
+    {"id": "median", "name": "中值滤波", "description": "使用最近窗口内数值的中位数抑制尖峰"},
+    {"id": "exponential", "name": "指数平滑", "description": "按平滑系数加权近期数值"},
+    {"id": "circular_average", "name": "角度均值滤波", "description": "按圆周角计算均值，避免跨越 0° 时产生错误"},
+    {"id": "majority", "name": "众数滤波", "description": "使用最近窗口内出现次数最多的离散值"},
+    {"id": "round", "name": "取整", "description": "对当前数值四舍五入"}
+  ],
+  "default_window": 5,
+  "default_alpha": 0.3
+}

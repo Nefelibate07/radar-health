@@ -1,0 +1,8 @@
+Flask>=3.1,<4
+Flask-SocketIO>=5.5,<6
+flask-cors>=5,<7
+python-socketio>=5,<6
+python-engineio>=4,<5
+simple-websocket>=1,<2
+python-docx>=1.2,<2
+xlrd>=2,<3

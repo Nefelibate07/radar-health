@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "motor_subsystem_ids": [
+    "azimuth-motor-1",
+    "azimuth-motor-2",
+    "elevation-motor-1",
+    "elevation-motor-2",
+    "tilt-motor-1",
+    "tilt-motor-2"
+  ],
+  "motor_fault_classes": [
+    "电机掉电",
+    "电机卡顿",
+    "电机过热",
+    "过流",
+    "电压异常",
+    "断齿",
+    "磨损",
+    "点蚀",
+    "胶合",
+    "裂纹"
+  ],
+  "motor_components": [
+    {
+      "id": "rotor",
+      "name": "转子",
+      "keywords": [
+        "电机状态",
+        "转速",
+        "转子"
+      ],
+      "fault_classes": [
+        "电机卡顿",
+        "转速异常",
+        "转子偏心或不平衡",
+        "驱动反馈异常"
+      ]
+    },
+    {
+      "id": "power",
+      "name": "电源",
+      "keywords": [
+        "电流",
+        "电压",
+        "加电",
+        "供电",
+        "电源"
+      ],
+      "fault_classes": [
+        "供电中断",
+        "电压异常",
+        "过流保护",
+        "电源状态告警"
+      ]
+    },
+    {
+      "id": "bearing",
+      "name": "轴承与传动",
+      "keywords": [
+        "轴承",
+        "减速机",
+        "制动器",
+        "齿轮"
+      ],
+      "fault_classes": [
+        "轴承异常",
+        "减速机或制动器异常",
+        "断齿或磨损",
+        "点蚀、胶合或裂纹"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "其他测点",
+      "keywords": [],
+      "fault_classes": [
+        "设备状态告警",
+        "参数越限",
+        "信号缺失",
+        "通信异常"
+      ]
+    }
+  ],
+  "generic_components": [
+    {
+      "id": "power",
+      "name": "供电测点",
+      "keywords": [
+        "电流",
+        "电压",
+        "加电",
+        "供电",
+        "电源"
+      ],
+      "fault_classes": [
+        "供电中断",
+        "电压异常",
+        "过流保护",
+        "电源状态告警"
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "环境测点",
+      "keywords": [
+        "温度",
+        "湿度",
+        "空调",
+        "冷却"
+      ],
+      "fault_classes": [
+        "温度越限",
+        "湿度越限",
+        "制冷或加热异常",
+        "传感器异常"
+      ]
+    },
+    {
+      "id": "measurement",
+      "name": "测量与编码测点",
+      "keywords": [
+        "编码",
+        "角度",
+        "方位",
+        "俯仰",
+        "速度"
+      ],
+      "fault_classes": [
+        "测量量越限",
+        "编码或位置偏差",
+        "零点漂移",
+        "数据缺失"
+      ]
+    },
+    {
+      "id": "control",
+      "name": "控制与通信测点",
+      "keywords": [
+        "状态",
+        "工作",
+        "模式",
+        "通信",
+        "跟踪",
+        "锁销",
+        "限位"
+      ],
+      "fault_classes": [
+        "控制状态异常",
+        "指令执行异常",
+        "状态不一致",
+        "通信中断"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "其他测点",
+      "keywords": [],
+      "fault_classes": [
+        "设备状态告警",
+        "参数越限",
+        "信号缺失",
+        "通信异常"
+      ]
+    }
+  ],
+  "generic_fault_classes": [
+    "参数越限",
+    "设备状态告警",
+    "数据缺失",
+    "通信异常"
+  ],
+  "system_fault_classes": [
+    "供电故障",
+    "驱动与传动故障",
+    "通信与跟踪故障",
+    "环境控制故障",
+    "测量故障",
+    "参数越限",
+    "设备状态告警"
+  ],
+  "source": "synthetic_demo",
+  "components_by_subsystem": {},
+  "signal_component_map": {},
+  "subsystem_fault_classes": {}
+}

@@ -1,0 +1,131 @@
+{
+  "name": "radar-health-reference-ui",
+  "private": true,
+  "version": "0.1.5",
+  "author": {
+    "name": "radar-health team",
+    "email": "support@example.com"
+  },
+  "description": "雷达健康监测公开合成演示版",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "node scripts/generate-config.cjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "desktop:dev": "cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 concurrently -k \"vite\" \"wait-on tcp:5173 && electron .\"",
+    "desktop:backend:build": "node scripts/build-backend.cjs",
+    "desktop:build": "npm run desktop:build:current",
+    "desktop:build:current": "npm run build && npm run desktop:backend:build && node scripts/package-current.cjs",
+    "desktop:build:win": "npm run build && cross-env DESKTOP_TARGET=win npm run desktop:backend:build && cross-env ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ ELECTRON_BUILDER_BINARIES_MIRROR=https://npmmirror.com/mirrors/electron-builder-binaries/ electron-builder --win --config.win.signAndEditExecutable=false",
+    "desktop:build:mac": "npm run build && cross-env DESKTOP_TARGET=darwin npm run desktop:backend:build && cross-env ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ ELECTRON_BUILDER_BINARIES_MIRROR=https://npmmirror.com/mirrors/electron-builder-binaries/ electron-builder --mac",
+    "desktop:build:linux": "npm run build && cross-env DESKTOP_TARGET=linux npm run desktop:backend:build && cross-env ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ ELECTRON_BUILDER_BINARIES_MIRROR=https://npmmirror.com/mirrors/electron-builder-binaries/ electron-builder --linux"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "axios": "^1.8.2",
+    "element-plus": "^2.11.3",
+    "socket.io-client": "^4.8.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "concurrently": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12",
+    "vite": "^6.2.0",
+    "wait-on": "^8.0.4"
+  },
+  "build": {
+    "appId": "cn.xuyunpeng.radarhealth.referenceui",
+    "productName": "雷达健康监测公开演示版",
+    "directories": {
+      "output": "release-public"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../backend",
+        "to": "backend-source",
+        "filter": [
+          "**/*",
+          "!data/**",
+          "!.venv/**",
+          "!.venv-x64/**",
+          "!venv/**",
+          "!**/.venv-x64/**",
+          "!**/venv/**",
+          "!**/__pycache__/**",
+          "!**/.pytest_cache/**",
+          "!**/*.pyc",
+          "!scripts/**",
+          "!**/*.db",
+          "!**/*.log"
+        ]
+      },
+      {
+        "from": "../config",
+        "to": "config"
+      },
+      {
+        "from": "backend-dist",
+        "to": "backend-dist"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "identity": null,
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "linux": {
+      "category": "Utility",
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "maintainer": "radar-health team <support@example.com>"
+    }
+  },
+  "homepage": "https://github.com/Nefelibate07/radar-health"
+}

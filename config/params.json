@@ -1,0 +1,689 @@
+{
+  "meta": {
+    "project": "公开合成演示",
+    "note": "所有测点、范围、拓扑和数值均为自定义演示配置，不来自客户技术协议。",
+    "source": "synthetic_demo",
+    "count_total": 36
+  },
+  "device": {
+    "id": "public-radar-demo",
+    "name": "合成雷达健康演示设备"
+  },
+  "subsystems": [
+    {
+      "id": "antenna-monitor-unit",
+      "code": "DEMO01",
+      "name": "演示控制器",
+      "params": [
+        {
+          "id": "demo-1-vibration",
+          "name": "演示轴承振动 RMS",
+          "dtype": "float",
+          "unit": "mm/s",
+          "precision": 0.01,
+          "range": [
+            0,
+            6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 1.2
+        },
+        {
+          "id": "demo-1-temperature",
+          "name": "演示轴承温度",
+          "dtype": "float",
+          "unit": "℃",
+          "precision": 0.01,
+          "range": [
+            20,
+            90
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 39
+        },
+        {
+          "id": "demo-1-noise",
+          "name": "演示高频噪声",
+          "dtype": "float",
+          "unit": "g",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        },
+        {
+          "id": "demo-1-axial",
+          "name": "演示轴向位移",
+          "dtype": "float",
+          "unit": "mm",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.5
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        }
+      ]
+    },
+    {
+      "id": "drive-adu",
+      "code": "DEMO02",
+      "name": "演示驱动器",
+      "params": [
+        {
+          "id": "demo-2-vibration",
+          "name": "演示轴承振动 RMS",
+          "dtype": "float",
+          "unit": "mm/s",
+          "precision": 0.01,
+          "range": [
+            0,
+            6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 1.2
+        },
+        {
+          "id": "demo-2-temperature",
+          "name": "演示轴承温度",
+          "dtype": "float",
+          "unit": "℃",
+          "precision": 0.01,
+          "range": [
+            20,
+            90
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 39
+        },
+        {
+          "id": "demo-2-noise",
+          "name": "演示高频噪声",
+          "dtype": "float",
+          "unit": "g",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        },
+        {
+          "id": "demo-2-axial",
+          "name": "演示轴向位移",
+          "dtype": "float",
+          "unit": "mm",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.5
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        }
+      ]
+    },
+    {
+      "id": "environment-control-device",
+      "code": "DEMO03",
+      "name": "演示环境传感器",
+      "params": [
+        {
+          "id": "demo-3-vibration",
+          "name": "演示轴承振动 RMS",
+          "dtype": "float",
+          "unit": "mm/s",
+          "precision": 0.01,
+          "range": [
+            0,
+            6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 1.2
+        },
+        {
+          "id": "demo-3-temperature",
+          "name": "演示轴承温度",
+          "dtype": "float",
+          "unit": "℃",
+          "precision": 0.01,
+          "range": [
+            20,
+            90
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 39
+        },
+        {
+          "id": "demo-3-noise",
+          "name": "演示高频噪声",
+          "dtype": "float",
+          "unit": "g",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        },
+        {
+          "id": "demo-3-axial",
+          "name": "演示轴向位移",
+          "dtype": "float",
+          "unit": "mm",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.5
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        }
+      ]
+    },
+    {
+      "id": "azimuth-motor-1",
+      "code": "DEMO04",
+      "name": "演示方位电机 1",
+      "params": [
+        {
+          "id": "demo-4-vibration",
+          "name": "演示轴承振动 RMS",
+          "dtype": "float",
+          "unit": "mm/s",
+          "precision": 0.01,
+          "range": [
+            0,
+            6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 1.2
+        },
+        {
+          "id": "demo-4-temperature",
+          "name": "演示轴承温度",
+          "dtype": "float",
+          "unit": "℃",
+          "precision": 0.01,
+          "range": [
+            20,
+            90
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 39
+        },
+        {
+          "id": "demo-4-noise",
+          "name": "演示高频噪声",
+          "dtype": "float",
+          "unit": "g",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        },
+        {
+          "id": "demo-4-axial",
+          "name": "演示轴向位移",
+          "dtype": "float",
+          "unit": "mm",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.5
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        }
+      ]
+    },
+    {
+      "id": "azimuth-motor-2",
+      "code": "DEMO05",
+      "name": "演示方位电机 2",
+      "params": [
+        {
+          "id": "demo-5-vibration",
+          "name": "演示轴承振动 RMS",
+          "dtype": "float",
+          "unit": "mm/s",
+          "precision": 0.01,
+          "range": [
+            0,
+            6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 1.2
+        },
+        {
+          "id": "demo-5-temperature",
+          "name": "演示轴承温度",
+          "dtype": "float",
+          "unit": "℃",
+          "precision": 0.01,
+          "range": [
+            20,
+            90
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 39
+        },
+        {
+          "id": "demo-5-noise",
+          "name": "演示高频噪声",
+          "dtype": "float",
+          "unit": "g",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        },
+        {
+          "id": "demo-5-axial",
+          "name": "演示轴向位移",
+          "dtype": "float",
+          "unit": "mm",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.5
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        }
+      ]
+    },
+    {
+      "id": "elevation-motor-1",
+      "code": "DEMO06",
+      "name": "演示俯仰电机 1",
+      "params": [
+        {
+          "id": "demo-6-vibration",
+          "name": "演示轴承振动 RMS",
+          "dtype": "float",
+          "unit": "mm/s",
+          "precision": 0.01,
+          "range": [
+            0,
+            6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 1.2
+        },
+        {
+          "id": "demo-6-temperature",
+          "name": "演示轴承温度",
+          "dtype": "float",
+          "unit": "℃",
+          "precision": 0.01,
+          "range": [
+            20,
+            90
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 39
+        },
+        {
+          "id": "demo-6-noise",
+          "name": "演示高频噪声",
+          "dtype": "float",
+          "unit": "g",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        },
+        {
+          "id": "demo-6-axial",
+          "name": "演示轴向位移",
+          "dtype": "float",
+          "unit": "mm",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.5
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        }
+      ]
+    },
+    {
+      "id": "elevation-motor-2",
+      "code": "DEMO07",
+      "name": "演示俯仰电机 2",
+      "params": [
+        {
+          "id": "demo-7-vibration",
+          "name": "演示轴承振动 RMS",
+          "dtype": "float",
+          "unit": "mm/s",
+          "precision": 0.01,
+          "range": [
+            0,
+            6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 1.2
+        },
+        {
+          "id": "demo-7-temperature",
+          "name": "演示轴承温度",
+          "dtype": "float",
+          "unit": "℃",
+          "precision": 0.01,
+          "range": [
+            20,
+            90
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 39
+        },
+        {
+          "id": "demo-7-noise",
+          "name": "演示高频噪声",
+          "dtype": "float",
+          "unit": "g",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        },
+        {
+          "id": "demo-7-axial",
+          "name": "演示轴向位移",
+          "dtype": "float",
+          "unit": "mm",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.5
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        }
+      ]
+    },
+    {
+      "id": "tilt-motor-1",
+      "code": "DEMO08",
+      "name": "演示旋转电机 1",
+      "params": [
+        {
+          "id": "demo-8-vibration",
+          "name": "演示轴承振动 RMS",
+          "dtype": "float",
+          "unit": "mm/s",
+          "precision": 0.01,
+          "range": [
+            0,
+            6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 1.2
+        },
+        {
+          "id": "demo-8-temperature",
+          "name": "演示轴承温度",
+          "dtype": "float",
+          "unit": "℃",
+          "precision": 0.01,
+          "range": [
+            20,
+            90
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 39
+        },
+        {
+          "id": "demo-8-noise",
+          "name": "演示高频噪声",
+          "dtype": "float",
+          "unit": "g",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        },
+        {
+          "id": "demo-8-axial",
+          "name": "演示轴向位移",
+          "dtype": "float",
+          "unit": "mm",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.5
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        }
+      ]
+    },
+    {
+      "id": "tilt-motor-2",
+      "code": "DEMO09",
+      "name": "演示旋转电机 2",
+      "params": [
+        {
+          "id": "demo-9-vibration",
+          "name": "演示轴承振动 RMS",
+          "dtype": "float",
+          "unit": "mm/s",
+          "precision": 0.01,
+          "range": [
+            0,
+            6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 1.2
+        },
+        {
+          "id": "demo-9-temperature",
+          "name": "演示轴承温度",
+          "dtype": "float",
+          "unit": "℃",
+          "precision": 0.01,
+          "range": [
+            20,
+            90
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 39
+        },
+        {
+          "id": "demo-9-noise",
+          "name": "演示高频噪声",
+          "dtype": "float",
+          "unit": "g",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.6
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        },
+        {
+          "id": "demo-9-axial",
+          "name": "演示轴向位移",
+          "dtype": "float",
+          "unit": "mm",
+          "precision": 0.01,
+          "range": [
+            0,
+            0.5
+          ],
+          "enum": null,
+          "appendix_no": null,
+          "raw_type": null,
+          "source": "synthetic_demo",
+          "review": true,
+          "demo_baseline": 0.08
+        }
+      ]
+    }
+  ]
+}
